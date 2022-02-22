@@ -165,17 +165,25 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  potencia = Math.floor(Math.log(n)/Math.LN10);
-  if( Math.floor(n/Math.pow(10,potencia)) === 9) { 
-    return true;
-  }else {
-    return false;
-  }
+  
+  // potencia = Math.floor(Math.log(n)/Math.LN10);
+  // if( Math.floor(n/Math.pow(10,potencia)) === 9) { 
+  //   return true;
+  // }else {
+  //   return false;
+  // }
   //ME COSTO ESTA! apuntan muy alto los de Henry...
   // primero debo saber cuantos digitos tiene "n"
   // dividiendo el logaritmo de n / el logaritmo de 10 y le quito los decimales, obtengo
   // el numero de digitos menos uno, lo iba a aumentar en uno pero me di cuenta
   // que 10 a n da un numero de n+1 digitos.
+  
+  // potencia = Math.floor(Math.log(n)/Math.LN10);
+  // return Math.floor(n/Math.pow(10,potencia)) === 9;
+  // aunque este no sea el más eficiente, me llena de orgullo.
+  
+  // La mejor respuesta:
+  return n.toString().charAt(0) === "9";
 }
 
 
